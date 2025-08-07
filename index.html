@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .heading {
+            text-align: center;
+            margin-top: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            font-size: 40px;
+
+        }
+
+        .card {
+            margin-top: 30px;
+            background-color: white;
+            width: fit-content;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px 40px;
+            text-align: center;
+            margin: 80px auto;
+        }
+
+        @media(max-width:500px) {
+            .card {
+                height: 400px;
+                width: 300px;
+                padding: 10px;
+
+            }
+
+            .heading {
+                text-align: center;
+                margin-top: 20px;
+
+                font-size: 10px;
+
+            }
+
+        }
+
+
+        .img-bulb {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            padding-top: 5px;
+            justify-content: center;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            cursor: pointer;
+
+
+        }
+
+        .btn {
+            min-width: 40%;
+            font-weight: bold;
+            background-color: #ff0000;
+            font-size: 20px;
+            border-radius: 10px;
+            text-align: center;
+            padding: 8px 16px;
+            color: white;
+        }
+
+        .btn:hover {
+            color: black;
+            background-color: white;
+            transition: 0.6s;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <h1 class="heading" id="heading">Image toggle</h1>
+    <div class="card" id="card">
+        <img src="m1.jpg" class="img-bulb" id="bulb">
+        <div class="btn-container">
+            <button class="btn" id="btn1" onclick="toggle()">Morning</button>
+
+        </div>
+    </div>
+    <script>
+        let isOn = false;
+        function toggle() {
+            isOn = !isOn;
+
+            const belement = document.getElementById("bulb");
+            const b1element = document.getElementById("body");
+            const b2element = document.getElementById("card");
+            const b3element = document.getElementById("heading");
+            const b4element = document.getElementById("btn1");
+
+            if (isOn) {
+                belement.src = "m3.jpg";
+                b4element.innerText = "Night";
+                b1element.style.backgroundColor = "#616161";
+                b3element.style.color = "white";
+                b2element.style.backgroundColor = "#494949";
+
+
+            }
+
+            else {
+                belement.src = "m1.jpg";
+                b4element.innerText = "Morning";
+                b1element.style.backgroundColor = "#ffff99";
+                b3element.style.color = "#ff3300";
+                b2element.style.backgroundColor = "#ffff80";
+            }
+
+
+        }
+    </script>
+
+</body>
