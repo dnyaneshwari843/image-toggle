@@ -22,7 +22,7 @@
         }
 
         .card {
-            margin-top: 30px;
+            margin-top: 20px;
             background-color: white;
             width: fit-content;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -34,20 +34,27 @@
 
         @media(max-width:500px) {
             .card {
-                height: 400px;
-                width: 300px;
-                padding: 10px;
-
-            }
+                height: fit-content;
+                width: 360px;
+                margin: 80px auto;
+                padding: 20px 10px;
+                margin-top: 70px
+             }
 
             .heading {
                 text-align: center;
-                margin-top: 20px;
-
-                font-size: 10px;
+                margin-top: 100px;
+                font-size: 40px;
 
             }
 
+            .img-bulb {
+                width: 60%;
+                height: 120px;
+                object-fit: contain;
+                justify-content: center;
+
+            }
         }
 
 
@@ -128,5 +135,6 @@
 
         }
     </script>
-
 </body>
+
+</html>
